@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap')
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url("background_img.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.game{
+    height: 40rem;
+    width: 40rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board{
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+}
+
+.head{
+    background-color: red;
+    z-index: 1;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.snake{
+    background-color: purple;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+.food{
+    background-color: rgb(128, 128, 128);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#ScoreBox{
+    position: absolute;
+    top: 50px;
+    right: 15rem;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Edu NSW ACT Foundation", cursive;
+}
+#HighScoreBox{
+    position: absolute;
+    top: 100px;
+    right: 12rem;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Edu NSW ACT Foundation", cursive;
+}
