@@ -1,6 +1,8 @@
 let board = document.querySelector(".board");
 let ScoreBox = document.querySelector("#ScoreBox");
 let arrowKeys = document.querySelectorAll(".arrow");
+let speedVal = document.querySelector(".spdVal")
+
 let lastPaintTime = 0;
 let inputDir = {
   x: 0,
@@ -8,11 +10,11 @@ let inputDir = {
 };
 let snakeArr = [{ x: 1, y: 1 }];
 let score = 0;
-let speed = 15;
+// let speed = speedVal.value;
 food = { x: 6, y: 7 };
 function main(ctime) {
   window.requestAnimationFrame(main);
-  if ((ctime - lastPaintTime) / 1000 < 1 / speed) {
+  if ((ctime - lastPaintTime) / 1000 < 1 / speedVal.value) {
     // convert ms -> sec
     return;
   }
