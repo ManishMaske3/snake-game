@@ -106,6 +106,11 @@ if (highScore == null) {
 
 window.requestAnimationFrame(main);
 window.addEventListener("keydown", (e) => {
+  // Prevent default scrolling when using arrow keys
+  if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
+    e.preventDefault();
+  }
+  
   // inputDir = {x: 0, y:1}
   switch (e.key) {
     case "ArrowUp":
